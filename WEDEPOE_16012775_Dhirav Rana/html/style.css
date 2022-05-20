@@ -1,0 +1,243 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01 Oct 2019, 2:36:35 PM
+    Author     : ranad
+*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    /*font:15px/1.5 Ariel, Helvetica, sans-serif;*/
+    padding:0;
+    background-color: #35424a;
+
+}
+/* Global : for other use*/
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1px;
+    
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+.button1{
+    height: 38px;
+    background: #e8491d;
+    padding:0 20px 0 20px;
+    border: 0;
+    color: #ffffff; 
+}
+
+/*background color*/
+.dark{
+    padding: 10px;
+    padding-right: 0%;
+    background: #35424a;
+    color: #ffffff;
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+/*Header*/
+img#image1{
+    height: 1%;
+    width: 5%;
+    display: inline-block;
+    float: right;
+}
+
+header {
+    background: black;
+    color: #ffffff;
+    padding-top: 10px;
+    min-height: 80%;
+    padding-right: 1%;
+    border-bottom: #35424a 4px solid;
+}
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: right;
+
+}
+header ul{
+    margin:0;
+    padding: 0;
+}
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+header #brand{
+    float: left;
+}
+header #brand h1{
+    margin: 0;
+    
+}
+header nav{
+    float: right;
+    margin-top: 10px; 
+}
+header .highlight, header .current a{
+    color: #e8491d;
+    font-weight: bold;
+    
+}
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+header h2{
+    position: initial;
+    float: left;
+}
+
+/* Showcase */
+
+#showcase{
+    min-height: 400px;
+    background: url('../img/showcaseImg.jpg') no-repeat 0 - 400px;
+    text-align: center;
+    color: #ffffff;
+}
+  .showcase:hover .content {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+  }
+#showcase h1{
+    margin-top:100px;
+    font-size: 55px;
+    margin-bottom: 10px; 
+}
+#showcase p{
+    font-size: 20px;
+}
+#newsletter{
+    padding: 15px;
+    color: #ffffff;
+    background: black/* #35424a*/;
+}
+
+/*News Letter*/
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top:15px; 
+}
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/*Boxes*/
+#boxes{
+    margin-top:20px; 
+}
+#boxes .box{
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#boxes .box img{
+    width: 90px;
+}
+/*Photo box*/
+
+#Photoboxes .box{
+    width: 30%;
+    float: left;
+    margin-top:20px; 
+    padding: 14px;
+}
+
+img#photoImg{
+    width: 100%;
+}
+
+/* main-col */
+article#main-col{
+    float: left;
+    width:65%;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+
+/*Will initialize for final task - for transitions of boxes
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+  }
+  70% {
+    box-shadow: 0 0 0 2 rgba(253, 87, 191, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+  }
+}*/
+
+/* Media Query */
+/* remove floats */
+/* Responsive Web Design Media Queries. 2019. Responsive Web Design Media Queries. 
+[ONLINE] Available at: https://www.w3schools.com/css/css_rwd_mediaqueries.asp. [Accessed 19 August 2019].
+*/
+@media(max-width:768px){
+   header #brand,
+   header nav,
+   header nav li,
+   #newsletter h1,
+   #newsletter form,
+   #boxes .box,
+   article#main-col,
+   aside#sidebar{
+       float: none;
+       text-align: center;
+       width: 100%;
+
+   }
+   header{
+       padding-bottom: 20px;
+   }
+
+   #showcase h1{
+       margin-top:40px;
+   }
+
+   #newsletter button, .quote button{
+     display: block;
+     width: 100%;  
+   }
+
+   #newsletter form input[type="email"], .quote input, .quote textarea{
+       width: 100%;
+       margin-bottom: 5px;
+   }
+}
